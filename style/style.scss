@@ -1,0 +1,162 @@
+$primary-color : #A96722;
+
+@mixin text-after($font) {
+    &::before{
+        content: $font;
+        position: absolute;
+        font-size: 4rem;
+        top: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        text-transform: capitalize;
+        text-align: center;
+        opacity: .1;
+        color: $primary-color;
+    }    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dancing script', cursive;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 1rem;
+    .logo{
+        width: 20%;
+        img{
+            width: 100%;
+        }
+    }
+    nav ul{
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        li{
+            a{
+                text-transform: capitalize;
+                color: black;
+                text-decoration: none;
+                font-size: 1.2rem;
+                transition: color .3s ease;
+                &:hover{
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+
+}
+
+main{
+    background: $primary-color;
+    min-height: 60vh;
+    padding: 1rem;
+    margin-top: 2rem;
+    .text{
+        text-transform: capitalize;
+        text-align: center;
+        .welcome{
+            display: block;
+            font-size: 5rem;
+
+        }
+    }
+}
+
+.about{
+    margin: 3rem 0;
+    padding: 1rem;
+    
+    .about-text{
+        .about-me{
+            position: relative;
+            text-align: center;
+            @include text-after('about');
+        }
+    }
+}
+
+.services{
+    margin: 3rem 0;
+    padding: 1rem;
+        .heading{
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+        @include text-after('services')
+    }
+}
+
+.contact{
+    margin: 3rem 0;
+    padding: 1rem;
+    form{
+        margin: 1rem 0;
+        div{
+            position: relative;
+            border: 2px solid $primary-color;
+            margin: 1rem 0;
+            text-transform: capitalize;
+            input,textarea{
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: .5rem;
+                font-size: 1.2rem;
+            }
+            label{
+                position: absolute;
+                left: .5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $primary-color;
+            }
+            .up{
+                position: absolute;
+                left: .5rem;
+                top: -10%;
+                color: $primary-color;
+                background: white;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .heading{
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+        @include text-after('contact')
+    }
+}
+
+
+.footer{
+    background: $primary-color;
+}
+
+@media (min-width:700px) {
+    header{
+        nav{
+            .logo{
+                width: 6%;
+            }
+        }
+    }
+    .contact{
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+    }
+}

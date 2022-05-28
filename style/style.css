@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dancing script", cursive;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 1rem;
+}
+header .logo {
+  width: 20%;
+}
+header .logo img {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+header nav ul li a {
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #A96722;
+}
+
+main {
+  background: #A96722;
+  min-height: 60vh;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+main .text {
+  text-transform: capitalize;
+  text-align: center;
+}
+main .text .welcome {
+  display: block;
+  font-size: 5rem;
+}
+
+.about {
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.about .about-text .about-me {
+  position: relative;
+  text-align: center;
+}
+.about .about-text .about-me::before {
+  content: "about";
+  position: absolute;
+  font-size: 4rem;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0.1;
+  color: #A96722;
+}
+
+.services {
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.services .heading {
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+}
+.services .heading::before {
+  content: "services";
+  position: absolute;
+  font-size: 4rem;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0.1;
+  color: #A96722;
+}
+
+.contact {
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.contact form {
+  margin: 1rem 0;
+}
+.contact form div {
+  position: relative;
+  border: 2px solid #A96722;
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+.contact form div input, .contact form div textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.contact form div label {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #A96722;
+}
+.contact form div .up {
+  position: absolute;
+  left: 0.5rem;
+  top: -10%;
+  color: #A96722;
+  background: white;
+  transform: translateY(-50%);
+}
+.contact .heading {
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+}
+.contact .heading::before {
+  content: "contact";
+  position: absolute;
+  font-size: 4rem;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  text-transform: capitalize;
+  text-align: center;
+  opacity: 0.1;
+  color: #A96722;
+}
+
+.footer {
+  background: #A96722;
+}
+
+@media (min-width: 700px) {
+  header nav .logo {
+    width: 6%;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
